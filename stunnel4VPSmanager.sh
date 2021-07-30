@@ -14,7 +14,7 @@ connect = 127.0.0.1:22" >> /etc/stunnel/stunnel.conf
 sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/stunnel4
 service stunnel4 start
 echo "Stunnel is now running"
-wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/main/vpsmanagersetup.sh
+wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/main/vpsmanagersetup.sh
 chmod +x vpsmanagersetup.sh
 ./vpsmanagersetup.sh
 exit 1

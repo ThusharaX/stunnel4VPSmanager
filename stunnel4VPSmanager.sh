@@ -1,5 +1,6 @@
 #!/bin/bash
 clear
+apt-get update -y
 IP=$(wget -qO- ipv4.icanhazip.com)
 apt-get install stunnel4
 openssl genrsa 2048 > stunnel.key

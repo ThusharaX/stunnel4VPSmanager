@@ -40,7 +40,7 @@ rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh > /dev/null
 apt-get install squid3 bc screen nano unzip dos2unix wget -y
 killall apache2
 apt-get purge apache2 -y
-wget -O /etc/ssh/sshd_config https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/sshd_config
+wget -O /etc/ssh/sshd_config https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/sshd_config
 service ssh restart
 banner_config(){ echo "© ThusharaX | 2021 All rights reserved" > /etc/bannerssh
 }
@@ -50,55 +50,55 @@ if [ -f "/usr/sbin/ufw" ] ; then
 fi
 if [ -d "/etc/squid3/" ]
 then
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/squid2.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/squid2.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid3/squid.conf
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/payload.txt -O /etc/squid3/payload.txt
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/payload.txt -O /etc/squid3/payload.txt
 	echo " " >> /etc/squid3/payload.txt
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/banner.sh -O /bin/banner
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/banner.sh -O /bin/banner
 	chmod +x /bin/banner
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/firewall.sh -O /bin/firewall
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/firewall.sh -O /bin/firewall
 	chmod +x /bin/firewall
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/firewall2.sh -O /bin/firewall2
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/firewall2.sh -O /bin/firewall2
 	chmod +x /bin/firewall2
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/torrent.sh -O /bin/torrent
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/torrent.sh -O /bin/torrent
 	chmod +x /bin/torrent
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/alterarsenha.sh -O /bin/alterarsenha
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/criarusuario2.sh -O /bin/criarusuario
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/ajuda.sh -O /bin/ajuda
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
 	chmod +x /bin/badvpnsetup
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
 	chmod +x /bin/tcptweaker
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/userbackup.sh -O /bin/userbackup
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/userbackup.sh -O /bin/userbackup
 	chmod +x /bin/userbackup
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/otimizar.sh -O /bin/otimizar
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/otimizar.sh -O /bin/otimizar
 	chmod +x /bin/otimizar
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/speedtest.sh -O /bin/speedtest
 	chmod +x /bin/speedtest
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/speedtest.py -O /bin/speedtest.py
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/speedtest.py -O /bin/speedtest.py
 	chmod +x /bin/speedtest.py
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/detalhes.sh -O /bin/detalhes
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/detalhes.sh -O /bin/detalhes
 	chmod +x /bin/detalhes
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -115,55 +115,55 @@ then
 fi
 if [ -d "/etc/squid/" ]
 then
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/squid2.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/squid2.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid/squid.conf
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/payload.txt -O /etc/squid/payload.txt
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/payload.txt -O /etc/squid/payload.txt
 	echo " " >> /etc/squid/payload.txt
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/banner.sh -O /bin/banner
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/banner.sh -O /bin/banner
 	chmod +x /bin/banner
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/firewall.sh -O /bin/firewall
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/firewall.sh -O /bin/firewall
 	chmod +x /bin/firewall
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/firewall2.sh -O /bin/firewall2
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/firewall2.sh -O /bin/firewall2
 	chmod +x /bin/firewall2
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/torrent.sh -O /bin/torrent
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/torrent.sh -O /bin/torrent
 	chmod +x /bin/torrent
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/alterarsenha.sh -O /bin/alterarsenha
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/criarusuario2.sh -O /bin/criarusuario
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/ajuda.sh -O /bin/ajuda
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
-	wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
 	chmod +x /bin/badvpnsetup
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
 	chmod +x /bin/tcptweaker
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/userbackup.sh -O /bin/userbackup
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/userbackup.sh -O /bin/userbackup
 	chmod +x /bin/userbackup
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/otimizar.sh -O /bin/otimizar
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/otimizar.sh -O /bin/otimizar
 	chmod +x /bin/otimizar
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/speedtest.sh -O /bin/speedtest
 	chmod +x /bin/speedtest
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/speedtest.py -O /bin/speedtest.py
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/speedtest.py -O /bin/speedtest.py
 	chmod +x /bin/speedtest.py
-    wget https://raw.githubusercontent.com/ThusharaX/vpsmanager/master/scripts/detalhes.sh -O /bin/detalhes
+    wget https://raw.githubusercontent.com/ThusharaX/stunnel4VPSmanager/master/scripts/detalhes.sh -O /bin/detalhes
 	chmod +x /bin/detalhes
 	if [ ! -f "/etc/init.d/squid" ]
 	then
